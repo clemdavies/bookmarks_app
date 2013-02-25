@@ -2,4 +2,6 @@ require 'spec_helper'
 
 describe Bookmark do
 
+    #not sute what to test for
+
 end

@@ -24,7 +24,11 @@ describe BookmarksController do
   # Bookmark. As you add validations to Bookmark, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {
+        url: "testurl.com",
+        name: "testname",
+        date_saved: "date saved"
+    }
   end
 
   # This should return the minimal set of values that should be in the session
@@ -33,6 +37,7 @@ describe BookmarksController do
   def valid_session
     {}
   end
+
 
   describe "GET index" do
     it "assigns all bookmarks as @bookmarks" do
@@ -66,6 +71,8 @@ describe BookmarksController do
   end
 
   describe "POST create" do
+
+
     describe "with valid params" do
       it "creates a new Bookmark" do
         expect {
